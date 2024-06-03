@@ -1,7 +1,8 @@
+import 'package:authentication_app/module/signup/signup_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const MyApp()); // app.dart
 }
 
 class MyApp extends StatelessWidget {
@@ -12,9 +13,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       initialRoute: 'onboarding',
       routes: {
-        'onboarding': (context) => const OnboardingPage(),
-        'login': (context) => const LoginPage(),
-        'singUp': (context) => const SingUpPage(),
+        'onboarding': (context) =>
+            const OnboardingPage(), // onboarding_page.dart
+        'login': (context) => const LoginPage(), // login_page.dart
+        'singUp': (context) => const SingUpPage(), // signup_page.dart
       },
     );
   }
@@ -215,7 +217,7 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                     contentPadding: EdgeInsets.symmetric(
                       horizontal: 16.0,
-                      vertical: 8.0,
+                      vertical: 9.0,
                     ),
                   ),
                 ),
@@ -247,17 +249,6 @@ class _LoginPageState extends State<LoginPage> {
           ],
         ),
       ),
-    );
-  }
-}
-
-class SingUpPage extends StatelessWidget {
-  const SingUpPage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Scaffold(
-      backgroundColor: Colors.purple,
     );
   }
 }
